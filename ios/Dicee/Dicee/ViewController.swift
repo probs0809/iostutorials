@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageView2: UIImageView!
     @IBOutlet weak var diceImageView1: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        motionDice()
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//        motionDice()
+//    }
     
     
 
@@ -32,8 +32,8 @@ class ViewController: UIViewController {
     }
     
     func motionDice(){
-        diceImageView1.image = UIImage(named: "dice" + String(Int.random(in: 1 ... 6)))
-        diceImageView2.image = UIImage(named: "dice" + String(Int.random(in: 1 ... 6)))
+        diceImageView1.image = [UIImage(named: "dice1"),UIImage(named: "dice2"),UIImage(named: "dice3"),UIImage(named: "dice4"),UIImage(named: "dice5"),UIImage(named: "dice6")][Int.random(in: 0...5)]
+        diceImageView2.image = [UIImage(named: "dice1"),UIImage(named: "dice2"),UIImage(named: "dice3"),UIImage(named: "dice4"),UIImage(named: "dice5"),UIImage(named: "dice6")][Int.random(in: 0...5)]
     }
     
 }
